@@ -1,0 +1,90 @@
+:root{
+  --bg:#f6f6f6;
+  --surface:#ffffff;
+  --accent:#222222;
+  --muted:#666666;
+  --success:#0b7a4d;
+  --gap:16px;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; padding:0; background:var(--bg); color:var(--accent); }
+
+
+/* header */
+.site-header { background:transparent; border-bottom:1px solid rgba(0,0,0,0.08); }
+.header-inner{ display:flex; align-items:center; gap:12px; padding:12px 24px; }
+.logo{ display:inline-flex; align-items:center; text-decoration:none; }
+.site-name{ font-weight:600; margin-left:6px; font-size:1.1rem; }
+
+/* hamburger */
+.hamburger{ margin-left:auto; background:none; border: none; padding:8px; display:inline-flex; align-items:center; cursor:pointer; }
+.hamburger-box{ width:28px; height:18px; display:inline-block; position:relative; }
+.hamburger-inner{ position:absolute; top:50%; left:0; right:0; height:2px; background:var(--accent); transform:translateY(-50%); }
+.hamburger-inner::before, .hamburger-inner::after{ content:""; position:absolute; left:0; right:0; height:2px; background:var(--accent); }
+.hamburger-inner::before{ top:-8px; }
+.hamburger-inner::after{ top:8px; }
+
+/* nav (hidden by default on small) */
+.main-nav { display:none; }
+.main-nav ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; background-color: var(--accent);}
+.main-nav a{ display:block; padding:12px 20px; text-decoration:none; color:var(--accent); background:var(--accent); border-radius:4px; color: var(--surface);}
+.main-nav a:hover {
+  background-color: var(--muted);
+}
+
+/* main content */
+h1{ font-size:1.6rem; margin:24px 0; }
+.hero{ display:grid; grid-template-columns:1fr; gap:var(--gap); align-items:start; }
+.about p{ background:linear-gradient(#fff); padding:16px; border-radius:6px; box-shadow:0 1px 0 rgba(0,0,0,0.04); color:var(--muted); line-height:1.45; }
+.about h2{ background-color: var(--accent); color: var(--surface); padding: 5px;}
+.photo h2{ background-color: var(--accent); color: var(--surface); padding: 5px;}
+.photo img{ width:100%; max-width:260px; height:auto; display:block; border-radius:6px; background:#ddd; 
+            background:linear-gradient(#fff,#fff); padding:36px; border-radius:6px; box-shadow:0 1px 0 rgba(0,0,0,0.04); color:var(--muted); line-height:1.45;}
+
+/* course filters */
+.course-filters{ display:flex; gap:10px; margin:16px 0;justify-self: center; }
+.filter-btn{ padding:8px 12px; border-radius:8px; border:1px solid #ccc; background:var(--surface); cursor:pointer; }
+.filter-btn[aria-pressed="true"]{ border-color:var(--accent); box-shadow:0 0 0 3px rgba(34,34,34,0.05); }
+
+/* course list */
+.course-list{ display:flex; flex-direction:column; gap:12px; margin-bottom:12px; }
+.course-card{ padding:12px; background:var(--surface); border-radius:6px; border:1px solid #e6e6e6; display:flex; justify-content:space-between; align-items:center; }
+.course-meta{ display:flex; flex-direction:column; gap:4px; }
+.course-code{ font-weight:600; }
+.course-credits{ font-size:0.95rem; color:var(--muted); }
+.courses h2 {background-color: var(--accent); color: var(--bg); padding: 5px; text-align: center;}
+.socials{ justify-self: center; gap: 10px;}
+.socials img{ max-width: 40px;}
+.credits p{text-align: center;}
+
+/* completed styling */
+.completed{ border-left:6px solid var(--success); }
+
+/* footer */
+.site-footer{ padding:16px; text-align:center; color:var(--muted); font-size:0.9rem; border-top:1px solid rgba(0,0,0,0.06); margin-top:24px; background:transparent; background-color: var(--accent); color: var(--bg); }
+
+
+/* larger screens: desktop layout */
+@media (min-width: 700px) {
+  .main-nav { display:block; }
+  .header-inner{ padding:18px 24px; }
+  .main-nav ul { flex-direction:row; gap:12px; }
+  .main-nav a { background:transparent; padding:12px 8px; border-radius:0; }
+  .hamburger{ display:none; }
+  .container{ display:block; }
+  
+
+  .hero{ grid-template-columns: 1fr 360px; gap:24px; align-items:start; }
+  h1{ font-size:2rem; }
+
+  .course-list{ flex-direction:row; flex-wrap:wrap; gap:16px; }
+  .course-card{ flex:1 1 calc(33% - 16px); min-width:220px; }
+}
+
+/* wide screens tidy */
+@media (min-width: 1100px){
+  .container{ padding:32px; }
+}

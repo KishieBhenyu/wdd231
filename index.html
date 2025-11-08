@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Course Home Page demonstrating responsive layout, accessibility, and dynamic course listing." />
+  <meta name="author" content="Student Name" />
+  <title>Web Development — Kishie Bhenyu</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/home.css">
+  
+  <!-- JS (deferred) -->
+  <script src="scripts/home.js" defer></script>
+ 
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo (svg) -->
+      <a href="index.html" class="logo" aria-label="Site home">
+        <!-- simple accessible inline svg -->
+        <svg width="48" height="48" viewBox="0 0 100 100" role="img" aria-hidden="false">
+          <rect x="10" y="10" width="80" height="80" rx="10" fill="#222" />
+          <text x="50" y="58" font-size="42" fill="#fff" text-anchor="middle" font-family="Inter, sans-serif">S</text>
+        </svg>
+      </a>
+
+      <span class="site-name">Kishie Bhenyu</span>
+
+      <!-- hamburger for small screens -->
+      <button id="navToggle" class="hamburger" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+    </div>
+
+    <!-- navigation -->
+    <nav id="mainNav" class="main-nav" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber.html">Chamber Project</a></li>
+        <li><a href="final.html">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content" class="container">
+    <h1>Home</h1>
+
+    <section class="hero">
+      <div class="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>
+          My name is Kishie Bhenyu. I am a 33 year old man from Zimbabwe. I <br>
+          was born in the capital city called Harare and raised in Gweru. I am currently <br>
+           working as a sales rep for an ICT company called Innovative Technologies which  <br>
+           is one of the biggest ICT distributing company in Zimbabwe. I am married to my  <br>
+           wife and we have one daughter. I am studying Web and computer programing. <br></p>
+        </p>
+      </div>
+
+      <aside class="photo" aria-labelledby="photo-heading">
+        <h2 id="photo-heading">Student Photo</h2>
+        <img src="images/student_photo.jpg"
+             sizes="(max-width:600px) 90vw, 360px" alt="Student portrait placeholder" />
+      </aside>
+    </section>
+
+    <section class="courses" aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Web Certificate Courses</h2>
+
+      <div class="course-filters" role="toolbar" aria-label="Course filters">
+        <button data-filter="all" class="filter-btn" aria-pressed="true">All</button>
+        <button data-filter="CSE" class="filter-btn" aria-pressed="false">CSE</button>
+        <button data-filter="WDD" class="filter-btn" aria-pressed="false">WDD</button>
+      </div>
+
+      <div id="coursesList" class="course-list" aria-live="polite">
+        <!-- dynamic course cards inserted here -->
+      </div>
+
+      <div class="credits">
+        <p id="creditsTotal">The total credits for course listed above is <strong id="creditsCount">0</strong></p>
+      </div>
+    </section>
+
+    <section class="socials" aria-label="Social links">
+      <a href="https://github.com/KishieBhenyu" target="_blank" rel="noopener" aria-label="GitHub"><img src="Images/github (1).png" alt=""></a>
+      <a href="https://www.linkedin.com/in/kishie-bhenyu-64b0b8349" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="Images/linkedin (2).png" alt=""></a>
+      <a href="https://x.com" target="_blank" rel="noopener" aria-label="Other social"><img src="Images/twitter (3).png" alt=""></a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p id="copyright">&copy; <span id="year"></span> • Student Name • Utah, USA</p>
+    <p id="lastModified">Last Modified: <span id="lmValue"></span></p>
+  </footer>
+</body>
+</html>
