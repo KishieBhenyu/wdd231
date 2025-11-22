@@ -1,0 +1,122 @@
+:root{
+  --primary: #006B3F;
+  --accent: #FCD116;
+  --bg: #fff;
+  --muted: #4f4f4f;
+  --text: #1b1b1b;
+  --radius: 10px;
+  --gap: 1rem;
+  --container-width: 1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;color:var(--text);background:#f5f7f8}
+.container{width:clamp(320px,94%,var(--container-width));margin:0 auto;padding:1rem}
+
+/* Header  */
+.site-header{background:var(--muted);color:#fff;}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none}
+.logo{width:88px;border-radius:6px}
+.nav-toggle{
+  background:none;color:#fff;border:none;font-size:1.4rem;cursor:pointer;
+}
+.main-nav ul{
+  display:flex;list-style:none;gap:1rem;margin:0;padding:0;
+}
+.main-nav a{color:#fff;text-decoration:none;font-weight:600;padding:.5rem .6rem}
+.main-nav a.active,
+.main-nav a:hover{background:rgba(255,255,255,.1)}
+
+@media (max-width:800px){
+  .main-nav{display:none;position:absolute;right:1rem;top:70px;background:var(--primary);padding:.75rem;border-radius:8px}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column}
+}
+
+/* Page heading */
+.join-page h1{margin-top:1rem}
+.lede{color:var(--muted);margin-bottom:1rem}
+
+/* Layout: form + cards */
+.form-layout{
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap:1.5rem;
+  align-items:start;
+}
+
+/* Responsive: on small screens stack */
+@media (max-width:900px){
+  .form-layout{grid-template-columns: 1fr;}
+  .membership-cards{order:2;margin-top:1rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+}
+
+/* Form styling */
+.join-form{background:var(--bg);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(10,10,10,0.06)}
+.join-form label{display:block;margin-bottom:.75rem}
+.label-text{display:block;font-weight:600;margin-bottom:.25rem}
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea{
+  width:100%;padding:.6rem;border:1px solid #dfe6e9;border-radius:8px;font-size:1rem;
+}
+.submit-label{margin-top:.5rem}
+.join-form input[type="submit"]{
+  background:var(--primary);color:#fff;border:0;padding:.65rem 1rem;border-radius:8px;font-weight:700;cursor:pointer;
+}
+.join-form input[type="submit"]:focus{outline:3px solid rgba(0,107,63,.18);outline-offset:2px}
+
+/* Cards */
+.membership-cards{display:flex;flex-direction:column;gap:.75rem}
+.card{background:var(--bg);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.06);text-align:center}
+.card h3{margin:.2rem 0}
+.card .small{color:var(--muted);font-size:.95rem}
+.card button{margin-top:.5rem;padding:.45rem .6rem;border-radius:6px;border:none;background:transparent;color:var(--primary);cursor:pointer;font-weight:600}
+
+/* Animations on initial load (fade + translate up) */
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.membership-card{opacity:0;animation:fadeUp .6s ease forwards}
+.membership-card:nth-child(1){animation-delay:.12s}
+.membership-card:nth-child(2){animation-delay:.24s}
+.membership-card:nth-child(3){animation-delay:.36s}
+.membership-card:nth-child(4){animation-delay:.48s}
+
+/* Modals */
+.modal-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;z-index:50
+}
+.modal-backdrop[aria-hidden="false"]{display:block}
+.modal{
+  position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+  max-width:720px;width:92%;background:var(--bg);border-radius:10px;padding:1rem;box-shadow:0 20px 60px rgba(0,0,0,.4);z-index:60;display:none;
+}
+.modal[aria-hidden="false"]{display:block}
+.modal-inner{position:relative}
+.modal-close{
+  position:absolute;right:8px;top:8px;border:0;background:transparent;font-size:1.6rem;cursor:pointer;
+}
+.modal h2{margin-top:0}
+.modal ul{margin:0 0 0 1.25rem}
+
+/* Small tweaks */
+.sr-only{position:absolute;left:-9999px}
+label input:focus, label textarea:focus, label select:focus{outline:3px solid rgba(0,107,63,.14);outline-offset:2px}
+
+/* Make sure forms and cards are visually distinct on small screens */
+@media (max-width:600px){
+  .join-form{padding:.75rem}
+  .membership-cards{grid-template-columns:repeat(2,1fr)}
+}
+
+/*** FOOTER ***/
+.site-footer{
+  background:#0e2b20;color:white;padding:1rem 0;
+}
+.footer-inner{display:flex;justify-content:space-between}
