@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>Harare Chamber of Commerce — Directory</title>
+  <meta name="description" content="Directory of Harare Chamber of Commerce members." >
+
+  <link rel="stylesheet" href="styles/directory.css" >
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/hcc_logo copy.png" alt="Harare Chamber of Commerce" class="logo" >
+        <span class="brand-title">Harare Chamber of Commerce</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" >Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="Images/harare_hero.webp" alt="Harare Skyline" class="hero-img" >
+    <div class="hero-text">
+      <h1>Explore Harare’s Business Community</h1>
+      <a href="#members" class="cta-btn">Browse Directory</a>
+    </div>
+  </section>
+
+  <!-- CURRENT EVENTS -->
+  <section class="current-events container">
+    <h2>Current Events</h2>
+    <article class="event-card">
+      <h3>Harare Business Summit 2025</h3>
+      <p>Date: December 15, 2025</p>
+      <p>Join local entrepreneurs and investors for a day of innovation and networking.</p>
+    </article>
+  </section>
+
+  <!-- WEATHER -->
+  <section class="weather container">
+    <h2>Harare Weather</h2>
+    <div id="weatherBox">
+      <p>Loading weather…</p>
+    </div>
+  </section>
+
+  <!-- COMPANY SPOTLIGHT -->
+  <section class="spotlight container">
+    <h2>Featured Members</h2>
+    <div id="spotlightBox" class="spotlight-grid"></div>
+  </section>
+
+  <!-- DIRECTORY CONTROLS -->
+  <main class="container">
+    <section class="controls">
+      <div class="controls-left">
+        <input id="search" type="search" placeholder="Search businesses, categories, addresses..." />
+      </div>
+
+      <div class="controls-right">
+        <button id="gridBtn" class="view-btn active" aria-pressed="true">Grid</button>
+        <button id="listBtn" class="view-btn" aria-pressed="false">List</button>
+
+        <select id="levelFilter">
+          <option value="all">All levels</option>
+          <option value="3">Gold</option>
+          <option value="2">Silver</option>
+          <option value="1">Member</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- MEMBERS -->
+    <section id="members" class="members grid-view"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Harare Chamber of Commerce</p>
+      <p class="muted">Developed by Kishie Bhenyu — WDD 231</p>
+    </div>
+  </footer>
+</body>
+</html>
