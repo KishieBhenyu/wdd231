@@ -1,104 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Harare Chamber of Commerce — Discover Harare</title>
-<meta name="description" content="Learn about Harare's history, demographics, culture, and current events.">
-<meta name="author" content="Tinbug Solutions" />
-
-
-<link rel="stylesheet" href="styles/discover.css" />
-<script src="scripts/discover.js defer"></script>
-<link rel="icon" href="images/favicon.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harare Chamber of Commerce — Discover</title>
+  <link rel="stylesheet" href="styles/discover.css">
+  <script type="module" src="scripts/discover.js" defer></script>
 </head>
+
 <body>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="Images/hcclogo.webp" alt="logo">
+        <span class="brand-title">Harare Chamber of Commerce</span>
+      </a>
+      <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<header class="site-header">
-<div class="container header-inner">
-<a class="brand" href="index.html">
-<img src="images/hcc_logo.png" alt="Harare Chamber logo" class="logo">
-<span class="brand-title">Harare Chamber of Commerce</span>
-</a>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="Images/harare_hero.webp" alt="Harare Skyline" class="hero-img">
+    <div class="hero-text">
+      <h1>Discover Harare</h1>
+    </div>
+  </section>
 
+  <!-- LAST VISIT MESSAGE -->
+  <section class="last-visit container">
+    <p id="last-visit"></p>
+  </section>
 
-<button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false">☰</button>
+  <!-- DISCOVER CARDS -->
+  <main class="container">
+    <div class="discover-grid"></div>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Harare Chamber of Commerce</p>
+      <p class="muted">Developed by Kishie Bhenyu — WDD 231</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
 
-<nav id="mainNav" class="main-nav" aria-label="Main navigation">
-<ul>
-<li><a href="directory_home.html">Home</a></li>
-<li><a href="discover.html" class="active">Discover</a></li>
-<li><a href="directory.html">Directory</a></li>
-<li><a href="join.html">Join</a></li>
-</ul>
-</nav>
-</div>
-</header>
-
-
-<main class="container">
-
-
-<!-- Hero -->
-<section class="hero simple-hero">
-<h1>Discover Harare</h1>
-<p class="muted">History • Demographics • Culture • Events</p>
-</section>
-
-
-<!-- History Section -->
-<section class="content-block">
-<h2>History of Harare</h2>
-<p>
-Harare, founded in 1890 and originally known as Salisbury, is Zimbabwe’s capital city and the heart of business, culture, and government. It became "Harare" in 1982, named after the Shona chief Neharawa. Today, the city blends colonial-era architecture, modern development, and a vibrant arts and music scene.
-</p>
-</section>
-
-
-<!-- Demographics Section -->
-<section class="content-block">
-<h2>Current Demographics</h2>
-<ul>
-<li><strong>Population:</strong> ~1.6 million (metropolitan)</li>
-<li><strong>Main Languages:</strong> Shona, English, Ndebele</li>
-<li><strong>Economy:</strong> Finance, retail, agriculture, manufacturing, technology</li>
-<li><strong>Median Age:</strong> ~20 years</li>
-</ul>
-</section>
-
-
-<!-- Current Events -->
-<section class="content-block">
-<h2>Current Events in the Community</h2>
-<div id="eventsList" class="events-list">
-<!-- Injected by discover.js -->
-</div>
-</section>
-
-
-<!-- Image Montage -->
-<section class="image-montage">
-<h2>Explore Harare</h2>
-<div class="montage-grid">
-<img src="images/montage1.jpg" alt="Harare skyline">
-<img src="images/montage2.jpg" alt="Local market">
-<img src="images/montage3.jpg" alt="Cultural festival">
-<img src="images/montage4.jpg" alt="Mukuvisi Woodlands">
-<img src="images/montage5.jpg" alt="Harare botanical gardens">
-<img src="images/montage6.jpg" alt="Downtown business district">
-</div>
-</section>
-
-
-</main>
-
-
-<footer class="site-footer">
-<div class="container footer-inner">
-<div>
-<p>&copy; <span id="year"></span> Harare Chamber of Commerce</p>
-<p class="muted">Kishie Bhenyu — WDD 231</p>
-</div>
+</body>
 </html>
