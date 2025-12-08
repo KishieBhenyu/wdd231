@@ -1,7 +1,6 @@
-//1. LOAD PRODUCTS FROM JSON WITH FETCH + TRY/CATCH 
+
 async function loadProducts() {
   try {
-    // products.json must be in the same folder as products.html
     const response = await fetch('products.json');
 
     if (!response.ok) {
@@ -20,12 +19,12 @@ async function loadProducts() {
 }
 
 
-// 2. DISPLAY PRODUCTS + LAZY LOADING
+
 function displayProducts(products) {
   const grid = document.getElementById('productGrid');
   if (!grid) return;
 
-  grid.innerHTML = ''; // clear if anything is there
+  grid.innerHTML = ''; 
 
   products.forEach((p) => {
     const card = document.createElement('div');
@@ -50,12 +49,11 @@ function displayProducts(products) {
   lazyLoadImages();
 }
 
-//3. LAZY LOADING FUNCTION 
+
 function lazyLoadImages() {
   const lazyImages = document.querySelectorAll('.lazy-img');
 
   if (!('IntersectionObserver' in window)) {
-    // Fallback: just load all images
     lazyImages.forEach((img) => {
       img.src = img.dataset.src;
       img.classList.remove('lazy-img');

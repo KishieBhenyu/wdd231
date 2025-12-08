@@ -206,3 +206,7 @@ header h1 {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+.site-footer img{
+  max-width: 100px;
+}

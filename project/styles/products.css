@@ -214,3 +214,7 @@ header h1 {
   font-size: 2rem;
   cursor: pointer;
 }
+
+.site-footer img{
+  max-width: 100px;
+}

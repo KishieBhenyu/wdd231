@@ -246,3 +246,7 @@ padding: 1rem;
 
 }
 
+.site-footer img{
+  max-width: 100px;
+}
+
