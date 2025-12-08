@@ -20,8 +20,6 @@ color: white;
 padding: 1rem 2rem;
 display: flex;
 justify-content: space-between;
-align-items: left;
-
 
 }
 
@@ -60,7 +58,7 @@ header img{max-width: 80px;}
 
 header h1{
     padding-top: 2%;
-    align-content: right;
+
 }
 
 
@@ -207,7 +205,6 @@ padding: 1rem;
   position: absolute;
   top: 110px;
   left: 0;
- align-items: left;
   z-index: 1000;
   opacity: 0.9;
 }
