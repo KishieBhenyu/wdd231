@@ -1,4 +1,4 @@
-// === 1. LOAD PRODUCTS FROM JSON WITH FETCH + TRY/CATCH ===
+//1. LOAD PRODUCTS FROM JSON WITH FETCH + TRY/CATCH 
 async function loadProducts() {
   try {
     // products.json must be in the same folder as products.html
@@ -20,7 +20,7 @@ async function loadProducts() {
 }
 
 
-// === 2. DISPLAY PRODUCTS + LAZY LOADING ===
+// 2. DISPLAY PRODUCTS + LAZY LOADING
 function displayProducts(products) {
   const grid = document.getElementById('productGrid');
   if (!grid) return;
@@ -50,7 +50,7 @@ function displayProducts(products) {
   lazyLoadImages();
 }
 
-// === 3. LAZY LOADING FUNCTION ===
+//3. LAZY LOADING FUNCTION 
 function lazyLoadImages() {
   const lazyImages = document.querySelectorAll('.lazy-img');
 
@@ -77,7 +77,7 @@ function lazyLoadImages() {
   lazyImages.forEach((img) => observer.observe(img));
 }
 
-// === 4. MODAL FUNCTIONALITY ===
+//4. MODAL FUNCTIONALITY 
 function openModal(p) {
   const modal = document.getElementById('productModal');
   const modalImage = document.getElementById('modalImage');
@@ -111,7 +111,7 @@ if (closeModalBtn && modalEl) {
   };
 }
 
-// === 5. MENU ===
+//5. MENU 
 const menuBtn = document.getElementById('menu-btn');
 const navMenu = document.getElementById('nav-menu');
 const openIcon = document.getElementById('open-icon');
@@ -127,11 +127,11 @@ if (menuBtn && navMenu && openIcon && closeIcon) {
   });
 }
 
-// === 6. FOOTER YEAR ===
+//6. FOOTER YEAR 
 const yearSpan = document.getElementById('year');
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// === 7. AUTO‑RUN ON LOAD ===
+//7. AUTO‑RUN ON LOAD 
 loadProducts();

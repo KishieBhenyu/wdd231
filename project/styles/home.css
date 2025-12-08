@@ -141,6 +141,13 @@ margin-bottom: 1rem;
     font-size:xx-large;
 }
 
+.product-card h2{
+color: white;
+background-color: #004aad;
+padding: 1rem;
+
+}
+
 .btn{
     color: white;
     background-color: #004aad;
