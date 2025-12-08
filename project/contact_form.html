@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP Laptop Store Contact Form</title>
+    <meta name="description" content="HP Laptop Store offering top-quality HP laptops, sales, and product details.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="author" content="Kishie Bhenyu">
+  <link rel="stylesheet" href="styles/contact_form.css">
+  <script type="module" src="scripts/contact_form.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="logo">
+    <h1>Laptop Store</h1>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation">
+      <span id="open-icon">☰</span>
+      <span id="close-icon">✕</span>
+    </button>
+
+    <nav id="nav-menu" class="nav-menu">
+      <a href="home.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="contact_form.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2 class="contact-title">Contact us</h2>
+
+    <form action="form_action.html" method="GET" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> HP Laptop Store</p>
+      <p class="muted">Developed by Kishie Bhenyu — WDD 231</p>
+    </div>
+  </footer>
+</body>
+</html>

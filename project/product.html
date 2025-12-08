@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HP Laptop Store Products Page</title>
+  <meta name="description" content="HP Laptop Store offering top-quality HP laptops, sales, and product details.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="author" content="Kishie Bhenyu">
+  <link rel="stylesheet" href="styles/products.css" />
+  <script src="scripts/products.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="logo">
+    <h1>Laptop Store</h1>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation">
+      <span id="open-icon">☰</span>
+      <span id="close-icon">✕</span>
+    </button>
+
+    <nav id="nav-menu" class="nav-menu">
+      <a href="home.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="contact_form.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/hero.jpg" alt="hp_hero" class="hero_img">
+    <div class="hero_text">
+      <h2 class="find">Our Laptops</h2>
+    </div>
+  </section>
+
+  <main>
+    <section class="product-grid" id="productGrid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">×</span>
+      <img id="modalImage" alt="">
+      <h2 id="modalName"></h2>
+      <p id="modalSpecs"></p>
+      <p id="modalPrice"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> HP Laptop Store</p>
+      <p class="muted">Developed by Kishie Bhenyu — WDD 231</p>
+    </div>
+  </footer>
+</body>
+</html>

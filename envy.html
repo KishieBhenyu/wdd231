@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HP Laptop Store</title>
+<link rel="stylesheet" href="styles/" >
+<script src="scripts/home.js "defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="logo">
+    <h1>Laptop Store</h1>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation">
+      <span id="open-icon">☰</span>
+      <span id="close-icon">✕</span>
+    </button>
+
+    <nav id="nav-menu" class="nav-menu">
+      <a href="home.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="contact_form.html">Contact</a>
+      <a href="specs.html" class="active">Specs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="HP hero banner" class="hero_img">
+      <div class="hero_text">
+        <h2>HP Laptop Specifications</h2>
+        <p>Compare key specs to find the right laptop for your needs.</p>
+      </div>
+    </section>
+
+    <section id="products" class="product-grid">
+      <!-- ITEM 1 -->
+      <article class="product-card">
+        <img src="images/pavillion.jpg" alt="HP Pavilion i5">
+        <h3>HP Pavilion i5</h3>
+        <ul class="spec-list">
+          <li><strong>CPU:</strong> Intel Core i5</li>
+          <li><strong>RAM:</strong> 8GB</li>
+          <li><strong>Storage:</strong> 512GB SSD</li>
+          <li><strong>Display:</strong> 15.6" Full HD</li>
+        </ul>
+        <p class="price">$699</p>
+        <button class="btn">View Details</button>
+      </article>
+
+      <!-- ITEM 2 -->
+      <article class="product-card">
+        <img src="images/envy.jpg" alt="HP Envy i7">
+        <h3>HP Envy i7</h3>
+        <ul class="spec-list">
+          <li><strong>CPU:</strong> Intel Core i7</li>
+          <li><strong>RAM:</strong> 16GB</li>
+          <li><strong>Storage:</strong> 1TB SSD</li>
+          <li><strong>Display:</strong> 15.6" Full HD</li>
+        </ul>
+        <p class="price">$899</p>
+        <button class="btn">View Details</button>
+      </article>
+
+      <!-- ITEM 3 -->
+      <article class="product-card">
+        <img src="images/notebook.jpg" alt="HP Notebook i3">
+        <h3>HP Notebook i3</h3>
+        <ul class="spec-list">
+          <li><strong>CPU:</strong> Intel Core i3</li>
+          <li><strong>RAM:</strong> 8GB</li>
+          <li><strong>Storage:</strong> 256GB SSD</li>
+          <li><strong>Display:</strong> 14" HD</li>
+        </ul>
+        <p class="price">$499</p>
+        <button class="btn">View Details</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> HP Laptop Store</p>
+      <p class="muted">Developed by Kishie Bhenyu — WDD 231</p>
+    </div>
+  </footer>
+</body>
+</html>

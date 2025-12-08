@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP Laptop Store Home Page</title>
+    <meta name="description" content="HP Laptop Store offering top-quality HP laptops, sales, and product details.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="author" content="Kishie Bhenyu">
+    <link rel="stylesheet" href="styles/home.css">
+    <script type="module" src="scripts/home.js" defer></script>
+
+</head>
+<body>
+<header>
+
+<img src="images/logo.png" alt="logo">
+<h1>Laptop Store</h1>
+
+  <button id="menu-btn" class="menu-btn">
+    <span id="open-icon">☰</span>
+    <span id="close-icon">✕</span> 
+          
+  </button>
+
+  <nav id="nav-menu" class="nav-menu">
+    <a href="home.html">Home</a>
+    <a href="product.html">Products</a>
+    <a href="contact_form.html">Contact</a>
+</nav>
+</header>
+
+
+<section class="hero">
+<img src="images/hero.jpg" alt="hp_hero" class="hero_img">
+<div class="hero_text">
+<h2 class="find">Find Your HP Laptop</h2>
+<p >Powerful. Reliable. Built for your success.</p>
+</div>
+</section>
+
+<section class="shop_now">
+  <a href="product.html" class="shop_btn">Shop Now</a>
+</section>
+
+<section id="products" class="product-grid">
+  
+<!-- ITEMS ADDED BELOW -->
+<div class="product-card">
+<img src="images/pavillion.jpg" alt="HP Laptop" />
+<h3>HP Pavilion i5</h3>
+<p class="price">$699</p>
+</div>
+
+
+<div class="product-card">
+<img src="images/envy.jpg" alt="HP Laptop" />
+<h3>HP Envy i7</h3>
+<p class="price">$899</p>
+</div>
+
+
+<div class="product-card">
+<img src="images/notebook.jpg" alt="HP Laptop" />
+<h3>HP Notebook i3</h3>
+<p class="price">$499</p>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> HP Laptop Store</p>
+      <p class="muted">Developed by Kishie Bhenyu — WDD 231</p>
+    </div>
+  </footer>
+
+</body>
+</html>

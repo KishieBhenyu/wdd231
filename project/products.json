@@ -1,0 +1,22 @@
+[
+  { "name": "HP 15 Dual Core Laptop", "price": 250, "cpu": "Dual Core", "ram": "4GB", "storage": "128GB SSD", "img": "images/dual_core.jpg" },
+  { "name": "HP 250 Dual Core Laptop", "price": 270, "cpu": "Dual Core", "ram": "4GB", "storage": "256GB SSD", "img": "images/250_dual.jpg" },
+
+  { "name": "HP 250 i3 Laptop", "price": 320, "cpu": "Intel i3", "ram": "8GB", "storage": "256GB SSD", "img": "images/250_i3.png" },
+  { "name": "HP Envy i3 Laptop", "price": 350, "cpu": "Intel i3", "ram": "8GB", "storage": "512GB SSD", "img": "images/envy_i3.png" },
+
+  { "name": "HP Pavillion i5 Laptop", "price": 420, "cpu": "Intel i5", "ram": "8GB", "storage": "256GB SSD", "img": "images/pav_i5.jpg" },
+  { "name": "HP Elitebook i5 Laptop", "price": 480, "cpu": "Intel i5", "ram": "16GB", "storage": "512GB SSD", "img": "images/elite_i5.webp" },
+  { "name": "HP Probook 450 i5 Laptop", "price": 520, "cpu": "Intel i5", "ram": "16GB", "storage": "1TB SSD", "img": "images/pb_i7.webp" },
+
+  { "name": "HP Omen i7 Laptop", "price": 620, "cpu": "Intel i7", "ram": "16GB", "storage": "512GB SSD", "img": "images/omen_i7.webp" },
+  { "name": "HP Victus i7 Laptop", "price": 690, "cpu": "Intel i7", "ram": "16GB", "storage": "1TB SSD", "img": "images/victus_i7.webp" },
+  { "name": "HP Pavillion i7 Laptop", "price": 750, "cpu": "Intel i7", "ram": "32GB", "storage": "1TB SSD", "img": "images/pavillion.jpg" },
+
+  { "name": "HP Zbook i9 Workstation", "price": 900, "cpu": "Intel i9", "ram": "32GB", "storage": "1TB SSD", "img": "images/zbook_i7.webp" },
+  { "name": "HP Victus i9 Laptop", "price": 980, "cpu": "Intel i9", "ram": "32GB", "storage": "1TB SSD", "img": "images/victus_i7.webp" },
+  { "name": "HP Elitebook i9 Laptop", "price": 1200, "cpu": "Intel i9", "ram": "32GB", "storage": "2TB SSD", "img": "images/elite_i5.webp" },
+
+  { "name": "HP Omen i5 Laptop", "price": 560, "cpu": "Intel i5", "ram": "8GB", "storage": "512GB SSD", "img": "images/omen_i7.webp" },
+  { "name": "HP Zbook i5 Workstation", "price": 780, "cpu": "Intel i7", "ram": "16GB", "storage": "1TB SSD", "img": "images/zbook_i7.webp" }
+]
